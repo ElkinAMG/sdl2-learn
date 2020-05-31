@@ -21,19 +21,19 @@ int main(int ac, char **av)
 		printf("SDL_Error: %s\n", SDL_GetError());
 
 	instance.window = SDL_CreateWindow("nikle",
-				  SDL_WINDOWPOS_CENTERED,
-				  SDL_WINDOWPOS_CENTERED,
-				  SCREEN_WIDTH,
-				  SCREEN_HEIGHT,
-				  SDL_WINDOW_SHOWN);
+					SDL_WINDOWPOS_CENTERED,
+					SDL_WINDOWPOS_CENTERED,
+					SCREEN_WIDTH,
+					SCREEN_HEIGHT,
+					SDL_WINDOW_SHOWN);
 	if (!instance.window)
 		printf("SDL_Error: %s\n", SDL_GetError());
 
 	instance.screenSurface = SDL_GetWindowSurface(instance.window);
 
 	SDL_FillRect(instance.screenSurface,
-		     NULL,
-		     SDL_MapRGB(instance.screenSurface->format,
+				 NULL,
+				 SDL_MapRGB(instance.screenSurface->format,
 				0xFF,
 				0xFF,
 				0xFF));
